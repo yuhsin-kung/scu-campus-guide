@@ -72,21 +72,23 @@ body {
 /* 藍色 tabs 列 */
 .top-tabs {
   display: flex;
+  justify-content: space-between;   /* ⭐ 左右貼齊，中間平均 */
   background: #92c3e8;
   border-top: 1px solid #777;
   border-bottom: 1px solid #777;
 }
 
 .tab {
-  flex: 1;
+  flex: 1;                           /* ⭐ 自動等寬，四等分 */
   text-align: center;
   padding: 12px 0;
   text-decoration: none;
   color: #000;
-  border-left: 1px solid #777;
+  border-left: 1px solid #777;       /* 讓每格都有分隔線 */
   border-right: 1px solid #777;
   box-sizing: border-box;
 }
+
 
 .tab.active {
   background: #b9d8f1;
@@ -174,6 +176,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
