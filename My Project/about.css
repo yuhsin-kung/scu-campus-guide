@@ -78,7 +78,7 @@ body {
 }
 
 .tab {
-  flex 1;
+  flex: 1;
   text-align: center;
   padding: 12px 0;
   text-decoration: none;
@@ -173,6 +173,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
