@@ -82,7 +82,7 @@ body {
 .pin-b { top: 55%; left: 45%; }  /* 綜合大樓 */
 .pin-c { top: 60%; left: 40%; }  /* 愛徒樓 */
 .pin-d { top: 50%; left: 35%; }  /* 第二教研大樓 */
-.pin-e { top: 80%; left: 55%; }  /* 操場 / 球場 */
+.pin-e { top: 85%; left: 65%; }  /* 操場 / 球場 */
 
 .pin-f { top: 40%; left: 60%; }  /* 文化樓 */
 .pin-g { top: 48%; left: 50%; }  /* 戴蓀堂 */
@@ -141,3 +141,4 @@ body {
     padding: 5px 10px;
   }
 }
+
