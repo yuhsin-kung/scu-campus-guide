@@ -1,4 +1,4 @@
-/* 簡單重設，避免怪邊距 */
+/* 簡單重設 */
 * {
   margin: 0;
   padding: 0;
@@ -14,19 +14,19 @@ body {
 .map-page {
   max-width: 1100px;
   margin: 32px auto 60px;
-  padding: 0 20px 40px;
+  padding: 0 20px;
 }
 
 .map-title {
-  font-size: 2rem;
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 8px;
 }
 
 .map-subtitle {
   text-align: center;
-  margin-bottom: 24px;
   color: #666;
+  margin-bottom: 24px;
 }
 
 /* 地圖外框 */
@@ -35,113 +35,98 @@ body {
   border-radius: 24px;
   overflow: hidden;
   background: #ddeef7;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* 手繪地圖本體 */
 .campus-map {
-  display: block;
   width: 100%;
+  display: block;
 }
 
-/* 共用標記造型 */
-.map-pin {
+/* 每一個點（poi）是一個群組：包含 hotspot + label */
+.poi {
+  position: absolute;   /* 以 map-container 當座標系 */
+}
+
+/* 看不見的可互動區域 */
+.poi-hotspot {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7%;          /* 熱區大小，你覺得太難點就加大一點 */
+  height: 7%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+/* 標籤本體：預設隱藏，滑過 poi 才出現 */
+.poi-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -130%);
   background: #1c7fd6;
   color: #fff;
   padding: 4px 10px;
   border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.65rem;
-  font-weight: 700;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  white-space: nowrap;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  gap: 4px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.map-pin .pin-code {
-  background: rgba(255,255,255,0.22);
-  padding: 2px 7px;
+.poi-label .code {
+  background: rgba(255,255,255,0.2);
+  padding: 1px 6px;
   border-radius: 999px;
 }
 
-.map-pin:hover {
-  background: #155f9f;
-  transform: translate(-50%, -50%) scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+/* 滑到整個 poi（熱區 or 標籤）就顯示 */
+.poi:hover .poi-label {
+  opacity: 1;
+  transform: translate(-50%, -145%);
 }
 
-/* ===== 這邊是各點「大概」的位置，之後你可以微調 ===== */
-/* top 越大越往下，left 越大越往右（百分比） */
+/* ------------------------- */
+/*   各建築的位置（百分比） */
+/*   覺得不準就調 top/left   */
+/* ------------------------- */
 
-.pin-a { top: 63%; left: 60%; }  /* 寵惠堂：操場上方偏中間 */
-.pin-b { top: 60%; left: 47%; }  /* 綜合大樓 */
-.pin-c { top: 60%; left: 40%; }  /* 愛徒樓 */
-.pin-d { top: 50%; left: 35%; }  /* 第二教研大樓 */
-.pin-e { top: 87%; left: 63%; }  /* 操場 / 球場 */
+/* top 越大越往下，left 越大越往右 */
 
-.pin-f { top: 40%; left: 60%; }  /* 文化樓 */
-.pin-g { top: 48%; left: 50%; }  /* 戴蓀堂 */
-.pin-h { top: 42%; left: 48%; }  /* 哲生樓 */
-.pin-i { top: 38%; left: 62%; }  /* 光道廳（理學區附近） */
-.pin-j { top: 48%; left: 65%; }  /* 研討室 */
-.pin-k { top: 52%; left: 68%; }  /* 心理實驗室 */
-.pin-l { top: 46%; left: 70%; }  /* 心理學系 */
-.pin-m { top: 38%; left: 68%; }  /* 超庸館 */
+.poi-a { top: 57%; left: 54%; }  /* 寵惠堂：大塊建築偏中間 */
+.poi-b { top: 55%; left: 47%; }  /* 綜合大樓 */
+.poi-c { top: 60%; left: 44%; }  /* 愛徒樓 */
+.poi-d { top: 52%; left: 39%; }  /* 第二教研大樓 */
+.poi-e { top: 82%; left: 58%; }  /* 操場 / 球場 */
 
-.pin-n { top: 30%; left: 52%; }  /* 中正圖書館（地圖偏上中） */
-.pin-p { top: 52%; left: 57%; }  /* 雷德樓 */
-.pin-q { top: 35%; left: 46%; }  /* 教師研究二樓 */
-.pin-r { top: 28%; left: 40%; }  /* 第一教研大樓 */
+.poi-f { top: 44%; left: 62%; }  /* 文化樓（右上那棟長條） */
+.poi-g { top: 50%; left: 53%; }  /* 戴蓀堂 */
+.poi-h { top: 45%; left: 50%; }  /* 哲生樓 */
 
-.pin-s { top: 32%; left: 20%; }  /* 楓雅學苑（左下宿舍群） */
-.pin-t { top: 26%; left: 24%; }  /* 東荊學蘆 */
-.pin-u { top: 22%; left: 28%; }  /* 東桂學蘆 */
+.poi-n { top: 33%; left: 55%; }  /* 中正圖書館（上方偏中） */
+.poi-p { top: 53%; left: 59%; }  /* 雷德樓 */
+.poi-q { top: 38%; left: 48%; }  /* 教師研究二樓 */
+.poi-r { top: 30%; left: 42%; }  /* 第一教研大樓 */
 
-/* ===== 下方說明區 ===== */
+.poi-t { top: 27%; left: 25%; }  /* 東荊學蘆（左上宿舍區） */
 
-.legend {
-  margin-top: 32px;
-}
-
-.legend h2 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  border-left: 4px solid #1c7fd6;
-  padding-left: 10px;
-}
-
-.legend-item + .legend-item {
-  margin-top: 18px;
-}
-
-.legend-item h3 {
-  font-size: 1.05rem;
-  margin-bottom: 4px;
-}
-
-.legend-item p {
-  font-size: 0.93rem;
-  line-height: 1.7;
-  color: #444;
-}
-
-/* 手機時把標記稍微放大一點點、文字縮小一點 */
+/* 手機稍微縮小一下 padding / 字體 */
 @media (max-width: 768px) {
   .map-page {
-    padding: 0 12px 32px;
+    padding: 0 12px;
   }
-
-  .map-pin {
-    font-size: 0.75rem;
-    padding: 5px 10px;
+  .poi-label {
+    font-size: 0.65rem;
+    padding: 3px 8px;
   }
 }
-
 
 
 
