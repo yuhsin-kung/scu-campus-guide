@@ -71,8 +71,8 @@ body {
 
 .map-pin:hover {
   background: #155f9f;
-  transform: translate(-50%, -50%) scale(1.07);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
 /* ===== 這邊是各點「大概」的位置，之後你可以微調 ===== */
@@ -141,5 +141,6 @@ body {
     padding: 5px 10px;
   }
 }
+
 
 
