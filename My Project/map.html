@@ -1,98 +1,91 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>校園地圖</title>
-  <link rel="stylesheet" href="map.css">
-</head>
-<body>
-  <main class="map-page">
-    <h1 class="map-title">雙溪校區校園地圖</h1>
-    <p class="map-subtitle">把滑鼠移到建築物上，可以看到大樓名稱標籤。</p>
+<div class="map-container">
+  <img src="map.png" class="map-img">
 
-    <div class="map-container">
-      <!-- 這張就是你給我的手繪地圖，檔名用 map.png -->
-      <img src="map.png" alt="雙溪校區手繪地圖" class="campus-map">
+  <!-- A 寵惠堂 -->
+  <div class="building" data-name="A 寵惠堂"
+    style="top: 58.5%; left: 46.5%; width: 9%; height: 9%;"></div>
 
-      <!-- A 寵惠堂 -->
-      <div class="poi poi-a">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">A</span> 寵惠堂</div>
-      </div>
+  <!-- B 綜合大樓 -->
+  <div class="building" data-name="B 綜合大樓"
+    style="top: 47%; left: 41.5%; width: 14%; height: 15%;"></div>
 
-      <!-- B 綜合大樓 -->
-      <div class="poi poi-b">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">B</span> 綜合大樓</div>
-      </div>
+  <!-- C 愛徒樓・安素堂 -->
+  <div class="building" data-name="C 愛徒樓・安素堂"
+    style="top: 66.5%; left: 33%; width: 9%; height: 12%;"></div>
 
-      <!-- C 愛徒樓 -->
-      <div class="poi poi-c">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">C</span> 愛徒樓</div>
-      </div>
+  <!-- D 第二教學研究大樓（松怡廳） -->
+  <div class="building" data-name="D 第二教學研究大樓（松怡廳）"
+    style="top: 72%; left: 37%; width: 16%; height: 21%;"></div>
 
-      <!-- D 第二教研大樓 -->
-      <div class="poi poi-d">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">D</span> 第二教研大樓</div>
-      </div>
+  <!-- E 汽機車停車場 -->
+  <div class="building" data-name="E 汽機車停車場"
+    style="top: 86%; left: 38%; width: 12%; height: 10%;"></div>
 
-      <!-- E 操場 / 球場 -->
-      <div class="poi poi-e">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">E</span> 操場 / 球場</div>
-      </div>
+  <!-- F 文化樓 -->
+  <div class="building" data-name="F 文化樓"
+    style="top: 53%; left: 52.5%; width: 8%; height: 10%;"></div>
 
-      <!-- F 文化樓 -->
-      <div class="poi poi-f">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">F</span> 文化樓</div>
-      </div>
+  <!-- G 戴蓀堂 -->
+  <div class="building" data-name="G 戴蓀堂"
+    style="top: 51%; left: 49%; width: 9%; height: 10%;"></div>
 
-      <!-- G 戴蓀堂 -->
-      <div class="poi poi-g">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">G</span> 戴蓀堂</div>
-      </div>
+  <!-- H 哲生樓 -->
+  <div class="building" data-name="H 哲生樓"
+    style="top: 46%; left: 55%; width: 10%; height: 12%;"></div>
 
-      <!-- H 哲生樓 -->
-      <div class="poi poi-h">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">H</span> 哲生樓</div>
-      </div>
+  <!-- I 光道廳 -->
+  <div class="building" data-name="I 光道廳"
+    style="top: 48%; left: 59%; width: 6%; height: 10%;"></div>
 
-      <!-- N 中正圖書館 -->
-      <div class="poi poi-n">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">N</span> 中正圖書館</div>
-      </div>
+  <!-- J 研討室 -->
+  <div class="building" data-name="J 研討室"
+    style="top: 59%; left: 60.5%; width: 6%; height: 9%;"></div>
 
-      <!-- P 雷德樓 -->
-      <div class="poi poi-p">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">P</span> 雷德樓</div>
-      </div>
+  <!-- K 心理系實驗室 -->
+  <div class="building" data-name="K 心理系實驗室"
+    style="top: 62.5%; left: 63%; width: 6%; height: 9%;"></div>
 
-      <!-- Q 教師研究二樓 -->
-      <div class="poi poi-q">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">Q</span> 教師研究二樓</div>
-      </div>
+  <!-- L 心理學系 -->
+  <div class="building" data-name="L 心理學系"
+    style="top: 55%; left: 63%; width: 8%; height: 11%;"></div>
 
-      <!-- R 第一教研大樓 -->
-      <div class="poi poi-r">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">R</span> 第一教研大樓</div>
-      </div>
+  <!-- M 超庸館 -->
+  <div class="building" data-name="M 超庸館"
+    style="top: 50%; left: 68%; width: 10%; height: 16%;"></div>
 
-      <!-- T 東荊學蘆 -->
-      <div class="poi poi-t">
-        <div class="poi-hotspot"></div>
-        <div class="poi-label"><span class="code">T</span> 東荊學蘆</div>
-      </div>
-    </div>
-  </main>
-</body>
-</html>
+  <!-- N 中正圖書館 -->
+  <div class="building" data-name="N 中正圖書館"
+    style="top: 39%; left: 51%; width: 12%; height: 15%;"></div>
+
+  <!-- P 雷德樓 -->
+  <div class="building" data-name="P 雷德樓"
+    style="top: 42.5%; left: 60%; width: 8%; height: 8%;"></div>
+
+  <!-- Q 教師研究二樓 -->
+  <div class="building" data-name="Q 教師研究二樓"
+    style="top: 40%; left: 45%; width: 6.5%; height: 8%;"></div>
+
+  <!-- R 第一教學研究大樓 -->
+  <div class="building" data-name="R 第一教學研究大樓"
+    style="top: 28%; left: 53%; width: 18%; height: 23%;"></div>
+
+  <!-- S 楓雅學苑 -->
+  <div class="building" data-name="S 楓雅學苑"
+    style="top: 32%; left: 41.5%; width: 10%; height: 15%;"></div>
+
+  <!-- T 東荊學蘆 -->
+  <div class="building" data-name="T 東荊學蘆"
+    style="top: 33%; left: 28%; width: 10%; height: 13%;"></div>
+
+  <!-- U 東桂學蘆 -->
+  <div class="building" data-name="U 東桂學蘆"
+    style="top: 29%; left: 60.5%; width: 10%; height: 12%;"></div>
+
+  <!-- 男生宿舍 松勁樓 -->
+  <div class="building" data-name="男生宿舍 松勁樓"
+    style="top: 32%; left: 33%; width: 12%; height: 13%;"></div>
+
+  <!-- 女生宿舍 榕華樓／柚芳樓 -->
+  <div class="building" data-name="女生宿舍 榕華樓・柚芳樓"
+    style="top: 37%; left: 67%; width: 18%; height: 14%;"></div>
+</div>
