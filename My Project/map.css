@@ -10,10 +10,9 @@
   display: block;
 }
 
-/* hover 區塊 */
 .building {
   position: absolute;
-  background: rgba(255, 255, 0, 0); /* 完全透明 */
+  background: rgba(255, 0, 0, 0.3); /* debug紅色區塊，對位置用 */
   cursor: pointer;
 }
 
@@ -33,8 +32,15 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.2s ease;
+  z-index: 9999;
 }
 
 .building:hover::after {
   opacity: 1;
 }
+
+
+.building:hover::after {
+  opacity: 1;
+}
+
