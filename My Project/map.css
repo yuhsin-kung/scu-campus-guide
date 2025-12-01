@@ -1,22 +1,23 @@
 .map-container {
   position: relative;
   width: 100%;
-  max-width: 700px;
-  margin: auto;
+  max-width: 1000px; /* ← 想更小改 900 / 800 / 700 也行 */
+  margin: 0 auto;
 }
 
 .map-img {
   width: 100%;
+  height: auto;
+  max-width: 100%;
   display: block;
 }
 
 .building {
   position: absolute;
-  background: rgba(255, 0, 0, 0.3); /* debug紅色區塊，對位置用 */
+  background: rgba(255, 0, 0, 0.3); /* debug */
   cursor: pointer;
 }
 
-/* tooltip */
 .building::after {
   content: attr(data-name);
   position: absolute;
@@ -40,8 +41,5 @@
 }
 
 
-.building:hover::after {
-  opacity: 1;
-}
 
 
