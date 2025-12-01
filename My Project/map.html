@@ -1,91 +1,211 @@
-<div class="map-container">
-  <img src="map.png" class="map-img">
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校園地圖</title>
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
 
-  <!-- A 寵惠堂 -->
-  <div class="building" data-name="A 寵惠堂"
-    style="top: 58.5%; left: 46.5%; width: 9%; height: 9%;"></div>
+  <main class="map-page">
+    <h1 class="map-title">雙溪校區校園地圖</h1>
+    <p class="map-subtitle">點擊地圖上的標記，可以查看各棟大樓與空間介紹。</p>
 
-  <!-- B 綜合大樓 -->
-  <div class="building" data-name="B 綜合大樓"
-    style="top: 47%; left: 41.5%; width: 14%; height: 15%;"></div>
+    <div class="map-container">
+      <!-- 這張就是你畫的那張手繪地圖，檔名你可以改成自己的 -->
+      <img src="map.png" class="campus-map" alt="東吳大學雙溪校區地圖">
 
-  <!-- C 愛徒樓・安素堂 -->
-  <div class="building" data-name="C 愛徒樓・安素堂"
-    style="top: 66.5%; left: 33%; width: 9%; height: 12%;"></div>
+      <!-- A～U 所有點位，top / left 之後可以自己微調 -->
 
-  <!-- D 第二教學研究大樓（松怡廳） -->
-  <div class="building" data-name="D 第二教學研究大樓（松怡廳）"
-    style="top: 72%; left: 37%; width: 16%; height: 21%;"></div>
+      <a href="#info-a" class="map-pin pin-a">
+        <span class="pin-code">A</span><span class="pin-name">寵惠堂</span>
+      </a>
 
-  <!-- E 汽機車停車場 -->
-  <div class="building" data-name="E 汽機車停車場"
-    style="top: 86%; left: 38%; width: 12%; height: 10%;"></div>
+      <a href="#info-b" class="map-pin pin-b">
+        <span class="pin-code">B</span><span class="pin-name">綜合大樓</span>
+      </a>
 
-  <!-- F 文化樓 -->
-  <div class="building" data-name="F 文化樓"
-    style="top: 53%; left: 52.5%; width: 8%; height: 10%;"></div>
+      <a href="#info-c" class="map-pin pin-c">
+        <span class="pin-code">C</span><span class="pin-name">愛徒樓</span>
+      </a>
 
-  <!-- G 戴蓀堂 -->
-  <div class="building" data-name="G 戴蓀堂"
-    style="top: 51%; left: 49%; width: 9%; height: 10%;"></div>
+      <a href="#info-d" class="map-pin pin-d">
+        <span class="pin-code">D</span><span class="pin-name">第二教研大樓</span>
+      </a>
 
-  <!-- H 哲生樓 -->
-  <div class="building" data-name="H 哲生樓"
-    style="top: 46%; left: 55%; width: 10%; height: 12%;"></div>
+      <a href="#info-e" class="map-pin pin-e">
+        <span class="pin-code">E</span><span class="pin-name">操場 / 球場</span>
+      </a>
 
-  <!-- I 光道廳 -->
-  <div class="building" data-name="I 光道廳"
-    style="top: 48%; left: 59%; width: 6%; height: 10%;"></div>
+      <a href="#info-f" class="map-pin pin-f">
+        <span class="pin-code">F</span><span class="pin-name">文化樓</span>
+      </a>
 
-  <!-- J 研討室 -->
-  <div class="building" data-name="J 研討室"
-    style="top: 59%; left: 60.5%; width: 6%; height: 9%;"></div>
+      <a href="#info-g" class="map-pin pin-g">
+        <span class="pin-code">G</span><span class="pin-name">戴蓀堂</span>
+      </a>
 
-  <!-- K 心理系實驗室 -->
-  <div class="building" data-name="K 心理系實驗室"
-    style="top: 62.5%; left: 63%; width: 6%; height: 9%;"></div>
+      <a href="#info-h" class="map-pin pin-h">
+        <span class="pin-code">H</span><span class="pin-name">哲生樓</span>
+      </a>
 
-  <!-- L 心理學系 -->
-  <div class="building" data-name="L 心理學系"
-    style="top: 55%; left: 63%; width: 8%; height: 11%;"></div>
+      <a href="#info-i" class="map-pin pin-i">
+        <span class="pin-code">I</span><span class="pin-name">光道廳</span>
+      </a>
 
-  <!-- M 超庸館 -->
-  <div class="building" data-name="M 超庸館"
-    style="top: 50%; left: 68%; width: 10%; height: 16%;"></div>
+      <a href="#info-j" class="map-pin pin-j">
+        <span class="pin-code">J</span><span class="pin-name">研討室</span>
+      </a>
 
-  <!-- N 中正圖書館 -->
-  <div class="building" data-name="N 中正圖書館"
-    style="top: 39%; left: 51%; width: 12%; height: 15%;"></div>
+      <a href="#info-k" class="map-pin pin-k">
+        <span class="pin-code">K</span><span class="pin-name">心理實驗室</span>
+      </a>
 
-  <!-- P 雷德樓 -->
-  <div class="building" data-name="P 雷德樓"
-    style="top: 42.5%; left: 60%; width: 8%; height: 8%;"></div>
+      <a href="#info-l" class="map-pin pin-l">
+        <span class="pin-code">L</span><span class="pin-name">心理學系</span>
+      </a>
 
-  <!-- Q 教師研究二樓 -->
-  <div class="building" data-name="Q 教師研究二樓"
-    style="top: 40%; left: 45%; width: 6.5%; height: 8%;"></div>
+      <a href="#info-m" class="map-pin pin-m">
+        <span class="pin-code">M</span><span class="pin-name">超庸館</span>
+      </a>
 
-  <!-- R 第一教學研究大樓 -->
-  <div class="building" data-name="R 第一教學研究大樓"
-    style="top: 28%; left: 53%; width: 18%; height: 23%;"></div>
+      <a href="#info-n" class="map-pin pin-n">
+        <span class="pin-code">N</span><span class="pin-name">中正圖書館</span>
+      </a>
 
-  <!-- S 楓雅學苑 -->
-  <div class="building" data-name="S 楓雅學苑"
-    style="top: 32%; left: 41.5%; width: 10%; height: 15%;"></div>
+      <a href="#info-p" class="map-pin pin-p">
+        <span class="pin-code">P</span><span class="pin-name">雷德樓</span>
+      </a>
 
-  <!-- T 東荊學蘆 -->
-  <div class="building" data-name="T 東荊學蘆"
-    style="top: 33%; left: 28%; width: 10%; height: 13%;"></div>
+      <a href="#info-q" class="map-pin pin-q">
+        <span class="pin-code">Q</span><span class="pin-name">教師研究二樓</span>
+      </a>
 
-  <!-- U 東桂學蘆 -->
-  <div class="building" data-name="U 東桂學蘆"
-    style="top: 29%; left: 60.5%; width: 10%; height: 12%;"></div>
+      <a href="#info-r" class="map-pin pin-r">
+        <span class="pin-code">R</span><span class="pin-name">第一教研大樓</span>
+      </a>
 
-  <!-- 男生宿舍 松勁樓 -->
-  <div class="building" data-name="男生宿舍 松勁樓"
-    style="top: 32%; left: 33%; width: 12%; height: 13%;"></div>
+      <a href="#info-s" class="map-pin pin-s">
+        <span class="pin-code">S</span><span class="pin-name">楓雅學苑</span>
+      </a>
 
-  <!-- 女生宿舍 榕華樓／柚芳樓 -->
-  <div class="building" data-name="女生宿舍 榕華樓・柚芳樓"
-    style="top: 37%; left: 67%; width: 18%; height: 14%;"></div>
-</div>
+      <a href="#info-t" class="map-pin pin-t">
+        <span class="pin-code">T</span><span class="pin-name">東荊學蘆</span>
+      </a>
+
+      <a href="#info-u" class="map-pin pin-u">
+        <span class="pin-code">U</span><span class="pin-name">東桂學蘆</span>
+      </a>
+
+    </div>
+
+    <!-- 下方文字說明（可以改成表格、卡片都可以） -->
+    <section class="legend">
+      <h2>建築說明</h2>
+
+      <article id="info-a" class="legend-item">
+        <h3>A 寵惠堂</h3>
+        <p>校長室、副校長室、教務長室、註冊課務組、招生組、學務長室、總務長室、出納組、研究發展長室、研究事務組、校務發展組、評鑑組、學術交流長室、國際事務中心、兩岸事務中心、社會資源長室、校友服務暨資源拓展中心、主任秘書室、秘書室、人事室、會計室、校友總會雙溪辦公室、法商聯合辦公室、校友交誼室、A111會議室、A302境外生輔導交流室。</p>
+      </article>
+
+      <article id="info-b" class="legend-item">
+        <h3>B 綜合大樓</h3>
+        <p>德育中心、群育暨美育中心、健康暨諮商中心(資源教室)、學生住宿中心、軍訓室(校安中心)、電子計算機中心、體育室、卓越資安中心、海量資料分析研究中心、懷恩數位校史館、事務組管理室、學生會、社團辦公室及活動空間、體育館、健身房、傳賢堂、國際會議廳、舜文廳、B013研討室、B501哺(集)乳室、便利商店、郵局、望星廣場、餐憶食堂、列印影印中心。</p>
+      </article>
+
+      <article id="info-c" class="legend-item">
+        <h3>C 愛徒樓．安素堂</h3>
+        <p>採購保管組、校牧室、社團辦公室及活動空間、C103議價室。</p>
+      </article>
+
+      <article id="info-d" class="legend-item">
+        <h3>D 第二教學研究大樓（松怡廳）</h3>
+        <p>人文社會學院、中國文學系、歷史學系、哲學系、政治學系、社會學系、社會工作學系、音樂學系、教學資源中心、教師教學發展組、學生學習資源組、教學科技推廣組、推廣部、通識教育中心、生涯發展中心、師資培育中心、校務資料分析中心、事務組管理室、松怡廳、虛擬攝影棚、學生學習進行室、教師研究室、咖啡坊。</p>
+      </article>
+
+      <article id="info-e" class="legend-item">
+        <h3>E 汽機車停車場 / 操場</h3>
+        <p>操場、田徑場與周邊戶外球場空間。</p>
+      </article>
+
+      <article id="info-f" class="legend-item">
+        <h3>F 文化樓</h3>
+        <p>微生物學系、心理學系(教師研究室)、檢驗研究中心行政辦公室、環境安全衛生暨事務管理組、營繕組、F103議價室。</p>
+      </article>
+
+      <article id="info-g" class="legend-item">
+        <h3>G 戴蓀堂</h3>
+        <p>語言教學中心、註冊課務組、G101會議室。</p>
+      </article>
+
+      <article id="info-h" class="legend-item">
+        <h3>H 哲生樓</h3>
+        <p>巨量資料管理學院、資料科學系、張佛泉人權研究中心、中東歐研究中心、GIS創造力暨產業育成中心、人權學程、中華文明現代化研究與創意中心、教師研究室、H101哲英廳。</p>
+      </article>
+
+      <article id="info-i" class="legend-item">
+        <h3>I 光道廳</h3>
+        <p>創新教育發展中心、化學實驗室、教師研究室。</p>
+      </article>
+
+      <article id="info-j" class="legend-item">
+        <h3>J 研討室</h3>
+        <p>微生物學系研討室、心理學系研討室等空間。</p>
+      </article>
+
+      <article id="info-k" class="legend-item">
+        <h3>K 心理學系實驗室</h3>
+        <p>心理學系電腦教室、心理學系實驗室。</p>
+      </article>
+
+      <article id="info-l" class="legend-item">
+        <h3>L 心理學系</h3>
+        <p>心理學系、教師研究室。</p>
+      </article>
+
+      <article id="info-m" class="legend-item">
+        <h3>M 超庸館</h3>
+        <p>化學系、微生物學系、檢驗研究中心、各式實驗室與教師研究室。</p>
+      </article>
+
+      <article id="info-n" class="legend-item">
+        <h3>N 中正圖書館</h3>
+        <p>圖書館與閱覽空間。</p>
+      </article>
+
+      <article id="info-p" class="legend-item">
+        <h3>P 雷德樓</h3>
+        <p>教師研究室等空間。</p>
+      </article>
+
+      <article id="info-q" class="legend-item">
+        <h3>Q 教師研究二樓</h3>
+        <p>教師研究室、招生專業化發展計畫辦公室、Q112研討室。</p>
+      </article>
+
+      <article id="info-r" class="legend-item">
+        <h3>R 第一教學研究大樓</h3>
+        <p>外語學院、英文學系、日本語文學系、德國文化學系、理學院、數學系、物理學系、事務組管理室、普仁堂、線上學習進行室、圖書館第二閱覽室、戴氏基金會會議室、教師研究室、R0108會議室、未來教室等。</p>
+      </article>
+
+      <article id="info-s" class="legend-item">
+        <h3>S 楓雅學苑</h3>
+        <p>華語教學中心。</p>
+      </article>
+
+      <article id="info-t" class="legend-item">
+        <h3>T 東荊學蘆</h3>
+        <p>學人招待中心。</p>
+      </article>
+
+      <article id="info-u" class="legend-item">
+        <h3>U 東桂學蘆</h3>
+        <p>學人招待中心、學生宿舍區域（松勁樓、榕華樓、柚芳樓）等。</p>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>
