@@ -1,129 +1,40 @@
-/* 簡單重設 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Noto Serif TC", serif;
-  background: #f4f7fb;
-  color: #222;
-}
-
-.map-page {
-  max-width: 1100px;
-  margin: 32px auto 60px;
-  padding: 0 20px;
-}
-
-.map-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 8px;
-}
-
-.map-subtitle {
-  text-align: center;
-  color: #666;
-  margin-bottom: 24px;
-}
-
-/* 地圖外框 */
 .map-container {
   position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  background: #ddeef7;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.campus-map {
+.map-img {
   width: 100%;
   display: block;
 }
 
-/* 每一個點（poi）是一個群組：包含 hotspot + label */
-.poi {
-  position: absolute;   /* 以 map-container 當座標系 */
-}
-
-.poi-hotspot {
-  width: 20%;  /* 超大的熱區測試 */
-  height: 20%;
-  background: rgba(255,0,0,0.2);  /* 臨時加可視化 */
-}
-
-/* 標籤本體：預設隱藏，滑過 poi 才出現 */
-.poi-label {
+/* hover 區塊 */
+.building {
   position: absolute;
-  top: 50%;
+  background: rgba(255, 255, 0, 0); /* 完全透明 */
+  cursor: pointer;
+}
+
+/* tooltip */
+.building::after {
+  content: attr(data-name);
+  position: absolute;
+  top: -32px;
   left: 50%;
-  transform: translate(-50%, -130%);
-  background: #1c7fd6;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 6px;
+  font-size: 13px;
   white-space: nowrap;
-  font-size: 0.7rem;
-  font-weight: 600;
   opacity: 0;
   pointer-events: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: 0.2s ease;
 }
 
-.poi-label .code {
-  background: rgba(255,255,255,0.2);
-  padding: 1px 6px;
-  border-radius: 999px;
-}
-
-/* 滑到整個 poi（熱區 or 標籤）就顯示 */
-.poi:hover .poi-label {
+.building:hover::after {
   opacity: 1;
-  transform: translate(-50%, -145%);
 }
-
-/* ------------------------- */
-/*   各建築的位置（百分比） */
-/*   覺得不準就調 top/left   */
-/* ------------------------- */
-
-/* top 越大越往下，left 越大越往右 */
-
-.poi-a { top: 57%; left: 54%; }  /* 寵惠堂：大塊建築偏中間 */
-.poi-b { top: 55%; left: 47%; }  /* 綜合大樓 */
-.poi-c { top: 60%; left: 44%; }  /* 愛徒樓 */
-.poi-d { top: 52%; left: 39%; }  /* 第二教研大樓 */
-.poi-e { top: 82%; left: 58%; }  /* 操場 / 球場 */
-
-.poi-f { top: 44%; left: 62%; }  /* 文化樓（右上那棟長條） */
-.poi-g { top: 50%; left: 53%; }  /* 戴蓀堂 */
-.poi-h { top: 45%; left: 50%; }  /* 哲生樓 */
-
-.poi-n { top: 33%; left: 55%; }  /* 中正圖書館（上方偏中） */
-.poi-p { top: 53%; left: 59%; }  /* 雷德樓 */
-.poi-q { top: 38%; left: 48%; }  /* 教師研究二樓 */
-.poi-r { top: 30%; left: 42%; }  /* 第一教研大樓 */
-
-.poi-t { top: 27%; left: 25%; }  /* 東荊學蘆（左上宿舍區） */
-
-/* 手機稍微縮小一下 padding / 字體 */
-@media (max-width: 768px) {
-  .map-page {
-    padding: 0 12px;
-  }
-  .poi-label {
-    font-size: 0.65rem;
-    padding: 3px 8px;
-  }
-}
-
-
-
-
-
