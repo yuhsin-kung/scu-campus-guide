@@ -48,15 +48,10 @@ body {
   position: absolute;   /* 以 map-container 當座標系 */
 }
 
-/* 看不見的可互動區域 */
 .poi-hotspot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 7%;          /* 熱區大小，你覺得太難點就加大一點 */
-  height: 7%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
+  width: 20%;  /* 超大的熱區測試 */
+  height: 20%;
+  background: rgba(255,0,0,0.2);  /* 臨時加可視化 */
 }
 
 /* 標籤本體：預設隱藏，滑過 poi 才出現 */
@@ -127,6 +122,7 @@ body {
     padding: 3px 8px;
   }
 }
+
 
 
 
