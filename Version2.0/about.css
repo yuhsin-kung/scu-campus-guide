@@ -69,6 +69,7 @@ body {
 .tab {
   flex: 1;                           /* 四個 tab 變成等寬 */
   text-align: center;                /* 文字置中 */
+  padding: 12px 0;
   text-decoration: none;             /* 把預設的底線拿掉 */
   color: #000;
   border-left: 1px solid #777;       /* 讓每格都有分隔線 */
@@ -171,6 +172,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
