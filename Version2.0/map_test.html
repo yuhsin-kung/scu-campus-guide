@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雙溪校區地圖</title>
+  <link rel="stylesheet" href="map_test.css">
+</head>
+
+<body>
+
+<main class="map-page">
+  <h1 class="map-title">雙溪校區校園地圖</h1>
+  <p class="map-subtitle">滑鼠移到建築物上會顯示名稱，點擊可以跳至詳細介紹。</p>
+
+  <div class="map-container">
+    <img src="images/map.png" class="campus-map">
+
+    <div class="building-area" data-name="S 楓雅學苑" data-target="#info-s"
+      style="top: 26%; left: 31.7%; width: 5%; height: 13.5%;"></div>
+
+    <div class="building-area" data-name="R 第一教學研究大樓" data-target="#info-r"
+      style="top: 22.8%; left: 41.7%; width: 9%; height: 9.5%;"></div>
+
+    <div class="building-area" data-name="U 東桂學蘆" data-target="#info-u"
+      style="top: 24%; left: 53%; width: 5.3%; height: 3%;"></div>
+
+    <div class="building-area" data-name="T 東荊學盧" data-target="#info-t"
+      style="top: 30%; left: 5%; width: 20%; height: 14%;"></div>
+
+    <div class="building-area" data-name="Q 教師研究二樓" data-target="#info-q"
+      style="top: 44%; left: 35%; width: 5%; height: 11%;"></div>
+
+    <div class="building-area" data-name="松勁樓" data-target="#info-x"
+      style="top: 47%; left: 22%; width: 8%; height: 6%;"></div>
+
+    <div class="building-area" data-name="柚芳樓" data-target="#info-y"
+      style="top: 32%; left: 51.7%; width: 8.5%; height: 5.5%;"></div>
+
+    <div class="building-area" data-name="榕華樓" data-target="#info-z"
+      style="top: 36%; left: 62.5%; width: 8.5%; height: 5.5%;"></div>
+
+    <div class="building-area" data-name="N 中正圖書館" data-target="#info-n"
+      style="top: 36%; left: 42%; width: 7%; height: 12%;"></div>
+
+    <div class="building-area" data-name="H 哲生樓" data-target="#info-h"
+      style="top: 41%; left: 50%; width: 11%; height: 7%;"></div>
+
+    <div class="building-area" data-name="P 雷德樓" data-target="#info-p"
+      style="top: 46%; left: 62%; width: 3.7%; height: 4%;"></div>
+
+    <div class="building-area" data-name="M 超庸館" data-target="#info-m"
+      style="top: 41%; left: 73%; width: 9%; height: 8%;"></div>
+
+    <div class="building-area" data-name="C 愛徒樓" data-target="#info-c"
+      style="top: 65%; left: 31%; width: 8%; height: 10%;"></div>
+
+    <div class="building-area" data-name="B 綜合大樓" data-target="#info-b"
+      style="top: 53%; left: 41%; width: 12%; height: 15%;"></div>
+
+    <div class="building-area" data-name="G 戴蓀堂" data-target="#info-g"
+      style="top: 54%; left: 55%; width: 8.3%; height: 5.5%;"></div>
+
+    <div class="building-area" data-name="A 寵惠堂" data-target="#info-a"
+      style="top: 61%; left: 57.5%; width: 8%; height: 7%;"></div>
+
+    <div class="building-area" data-name="F 文化樓" data-target="#info-f"
+      style="top: 57.3%; left: 67%; width: 4.3%; height: 9%;"></div>
+
+    <div class="building-area" data-name="I 光道廳" data-target="#info-j"
+      style="top: 46.5%; left: 66.5%; width: 3.7%; height: 7.5%;"></div>
+
+    <div class="building-area" data-name="D 第二教學研究大樓" data-target="#info-d"
+      style="top: 77%; left: 35%; width: 12.5%; height: 12%;"></div>
+
+    <div class="building-area" data-name="E 操場與球場" data-target="#info-e"
+      style="top: 79%; left: 49%; width: 27%; height: 16%;"></div>
+
+    <!-- 固定浮動建築名稱 -->
+    <div id="fixed-label" class="fixed-label"></div>
+  </div>
+
+  <section class="legend">
+    <!-- 建築介紹區 info-a ~ info-u 可以放這裡 -->
+  </section>
+
+</main>
+
+<script>
+  const label = document.getElementById("fixed-label");
+  const areas = document.querySelectorAll(".building-area");
+  const container = document.querySelector(".map-container");
+
+  areas.forEach(area => {
+    area.addEventListener("mouseenter", (e) => {
+      const rect = area.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+
+      label.textContent = area.dataset.name;
+      label.style.opacity = 1;
+
+      const top = rect.top - containerRect.top - 25; 
+      const left = rect.left - containerRect.left + rect.width / 2;
+
+      label.style.top = top + "px";
+      label.style.left = left + "px";
+    });
+
+    area.addEventListener("mouseleave", () => {
+      label.style.opacity = 0;
+    });
+
+    area.addEventListener("click", () => {
+      const target = area.dataset.target;
+      if (target) {
+        document.querySelector(target).scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
