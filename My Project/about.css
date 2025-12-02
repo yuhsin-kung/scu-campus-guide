@@ -115,6 +115,20 @@ body {
   text-indent: 2em;
 }
 
+.calendar-box {
+  width: 100%;
+  max-width: 680px;
+  margin: 20px auto 40px;
+}
+
+/* 讓行事曆 iframe 自動撐滿寬度並置中 */
+.calendar-box iframe {
+  width: 100%;
+  height: 520px;
+  border: none;
+  border-radius: 12px;
+}
+
 /* 右側滑出選單 */
 .side-menu {
   position: fixed;

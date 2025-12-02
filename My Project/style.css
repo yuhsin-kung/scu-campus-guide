@@ -12,7 +12,7 @@ body {
 /* 全螢幕首頁背景 */
 .hero {
   height: 100vh;  /* 高度＝整個螢幕 */
-  background-image: url("background.png");   /* 換成你自己的背景圖片 */
+  background-image: url("images/background.png");   /* 換成你自己的背景圖片 */
   background-size: cover;
   background-position: center;
   position: relative;
