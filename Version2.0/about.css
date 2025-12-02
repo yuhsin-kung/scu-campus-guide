@@ -42,7 +42,7 @@ body {
   transform: translateY(-50%);  /* 修正到正中線 */
   width: 28px;
   height: 22px;
-  border: none;
+  border: none;                 /* 移除外框 */
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -178,6 +178,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
