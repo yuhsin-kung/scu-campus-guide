@@ -81,6 +81,7 @@ body {
 .content {
   max-width: 960px;                  /* 把文章內容的最大寬度限制在960px */
   margin: 40px auto 60px;            /* 上面留白 40px 下面留白 60px，左右置中 */
+  padding: 0 32px;
 }
 
 .content section + section {
@@ -172,6 +173,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
