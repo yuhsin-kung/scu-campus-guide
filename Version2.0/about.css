@@ -55,6 +55,7 @@ body {
   height: 3px;                  /* 線的厚度 */
   border-radius: 2px;           /* 讓線的兩端變圓角 */
   background: #333;             /* 線的顏色 */
+}
 
 /* 藍色 tabs 列 */
 .top-tabs {
@@ -77,28 +78,27 @@ body {
   
 /* 主要內容 */
 .content {
-  max-width: 960px;
-  margin: 40px auto 60px;
-  padding: 0 32px;
+  max-width: 960px;                  /* 把文章內容的最大寬度限制在960px */
+  margin: 40px auto 60px;            /* 上面留白 40px 下面留白 60px，左右置中 */
 }
 
 .content section + section {
-  margin-top: 40px;
+  margin-top: 40px;                  /* section間加 40px 間距。 */
 }
 
 .content h1 {
-  font-size: 1.6rem;
-  margin-bottom: 16px;
+  font-size: 1.6rem;                 /* 字體大小 */
+  margin-bottom: 16px;              
 }
-
+  
 .content p {
   margin-bottom: 12px;
-  text-indent: 2em;
+  text-indent: 2em;                  /* 段落首行縮排 2 個中文字寬度 */
 }
 
 .calendar-box {
   width: 100%;
-  max-width: 680px;
+  max-width: 680px;                  /* 最大寬度 */
   margin: 20px auto 40px;
 }
 
@@ -171,6 +171,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
