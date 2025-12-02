@@ -34,16 +34,6 @@ body {
   height: 60px;
 }
 
-.scu-text .scu-zh {
-  font-size: 1.4rem;
-  letter-spacing: 0.3rem;
-}
-
-.scu-text .scu-en {
-  font-size: 0.9rem;
-  color: #555;
-}
-
 /* 右上漢堡按鈕 */
 .menu-toggle {
   position: absolute;           /* ⭐ 從排版中抽出，貼到右上角 */
@@ -188,6 +178,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
