@@ -36,7 +36,7 @@ body {
 
 /* 右上漢堡按鈕 */
 .menu-toggle {
-  position: absolute;           /* ⭐ 從排版中抽出，貼到右上角 */
+  position: absolute;           /* 從排版中抽出，貼到右上角 */
   right: 32px;                  /* 距離右邊 */
   top: 50%;                     /* 垂直置中 */
   transform: translateY(-50%);  /* 修正到正中線 */
@@ -60,14 +60,14 @@ body {
 /* 藍色 tabs 列 */
 .top-tabs {
   display: flex;
-  justify-content: space-between;   /* ⭐ 左右貼齊，中間平均 */
+  justify-content: space-between;   /* 左右貼齊，中間平均 */
   background: #92c3e8;
   border-top: 1px solid #777;
   border-bottom: 1px solid #777;
 }
 
 .tab {
-  flex: 1;                           /* ⭐ 自動等寬，四等分 */
+  flex: 1;                           /* 自動等寬，四等分 */
   text-align: center;
   padding: 12px 0;
   text-decoration: none;
@@ -178,6 +178,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
