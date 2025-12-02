@@ -28,7 +28,6 @@ body {
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .scu-logo {
@@ -189,6 +188,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
