@@ -66,8 +66,8 @@ body {
 }
 
 .tab {
-  flex: 1;                           /* 自動等寬，四等分 */
-  text-align: center;
+  flex: 1;                           /* 四個 tab 變成等寬 */
+  text-align: center;                /* 文字置中 */
   padding: 12px 0;
   text-decoration: none;
   color: #000;
@@ -172,6 +172,7 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
 
