@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雙溪校區地圖</title>
+  <link rel="stylesheet" href="map_test.css">
+</head>
+
+<body>
+  <header class="scu-header">
+    <div class="logo-area">
+      <a href="index.html">
+        <img src="images/scu.png" class="scu-logo" alt="東吳校徽">
+      </a>
+    </div>
+  <header>
+
+<main class="map-page">
+  <h1 class="map-title">雙溪校區校園地圖</h1>
+  <p class="map-subtitle">滑鼠移到建築物上會顯示名稱，點擊可以跳至詳細介紹。</p>
+
+  <div class="map-container">
+    <img src="images/map.jpg" class="campus-map">
+
+    <div class="building-area" data-name="S 楓雅學苑" data-target="#info-s"
+      style="top: 24.6%; left: 28.5%; width: 8%; height: 15%;"></div>
+
+    <div class="building-area" data-name="R 第一教學研究大樓" data-target="#info-r"
+      style="top: 22%; left: 41%; width: 10%; height: 9.5%;"></div>
+
+    <div class="building-area" data-name="U 東桂學蘆" data-target="#info-u"
+      style="top: 22.8%; left: 53.5%; width: 6.3%; height: 3%;"></div>
+
+    <div class="building-area" data-name="T 東荊學盧" data-target="#info-t"
+      style="top: 29%; left: 1%; width: 20%; height: 16%;"></div>
+
+    <div class="building-area" data-name="Q 教師研究二樓" data-target="#info-q"
+      style="top: 42%; left: 33%; width: 7%; height: 14%;"></div>
+
+    <div class="building-area" data-name="松勁樓" data-target="#info-x"
+      style="top: 46.5%; left: 18%; width: 10.5%; height: 6%;"></div>
+
+    <div class="building-area" data-name="柚芳樓" data-target="#info-y"
+      style="top: 31.5%; left: 51%; width: 11%; height: 5.5%;"></div>
+
+    <div class="building-area" data-name="榕華樓" data-target="#info-z"
+      style="top: 35%; left: 62.8%; width: 11%; height: 5.5%;"></div>
+
+    <div class="building-area" data-name="N 中正圖書館" data-target="#info-n"
+      style="top: 35.6%; left: 41%; width: 7%; height: 12%;"></div>
+
+    <div class="building-area" data-name="H 哲生樓" data-target="#info-h"
+      style="top: 41%; left: 49.7%; width: 13%; height: 7%;"></div>
+
+    <div class="building-area" data-name="P 雷德樓" data-target="#info-p"
+      style="top: 45%; left: 63%; width: 5%; height: 4%;"></div>
+
+    <div class="building-area" data-name="M 超庸館" data-target="#info-m"
+      style="top: 40%; left: 76%; width: 9%; height: 8%;"></div>
+
+    <div class="building-area" data-name="C 愛徒樓" data-target="#info-c"
+      style="top: 65%; left: 29.6%; width: 8%; height: 10%;"></div>
+
+    <div class="building-area" data-name="B 綜合大樓" data-target="#info-b"
+      style="top: 52%; left: 41%; width: 13%; height: 16%;"></div>
+
+    <div class="building-area" data-name="G 戴蓀堂" data-target="#info-g"
+      style="top: 53%; left: 55%; width: 10.5%; height: 5.5%;"></div>
+
+    <div class="building-area" data-name="A 寵惠堂" data-target="#info-a"
+      style="top: 60%; left: 58%; width: 9.5%; height: 7%;"></div>
+
+    <div class="building-area" data-name="F 文化樓" data-target="#info-f"
+      style="top: 56%; left: 69%; width: 4.3%; height: 10%;"></div>
+
+    <div class="building-area" data-name="I 光道廳" data-target="#info-i"
+      style="top: 45.5%; left: 68.5%; width: 3.7%; height: 8%;"></div>
+
+    <div class="building-area" data-name="D 第二教學研究大樓" data-target="#info-d"
+      style="top: 75.5%; left: 35%; width: 12.5%; height: 14%;"></div>
+
+    <div class="building-area" data-name="E 汽機車停車場" data-target="#info-e"
+      style="top: 92%; left:89% ;width:4%; height: 5%;"></div>
+
+    <div class="building-area" data-name="操場與球場" data-target="#info-1"
+      style="top: 81%; left: 50%; width: 37%; height: 14%;"></div>
+
+    <div class="building-area" data-name="L 心理學系" data-target="#info-l"
+      style="top: 45.8%; left: 72.5%; width: 3%; height: 5.5%;"></div>
+
+    <div class="building-area" data-name="J 研討室" data-target="#info-j"
+      style="top: 52.5%; left: 72.2%; width: 1.5%; height: 2%;"></div>
+
+    <div class="building-area" data-name="K 心理學系實驗室" data-target="#info-k"
+      style="top: 52.5%; left: 74.2%; width: 1.5%; height: 2%;"></div>
+
+    <div class="building-area" data-name="德舍" data-target="#info-2"
+      style="top: 60%; left:16%; width: 6.5%; height: 7%;"></div>
+
+    <div class="building-area" data-name="文舍" data-target="#info-3"
+      style="top: 58%; left:23%; width: 5.5%; height: 7%;"></div>
+
+    <div class="building-area" data-name="錢穆故居" data-target="#info-4"
+      style="top: 72%; left:20%; width: 9%; height: 12%;"></div>
+  
+    <!-- 固定浮動建築名稱 -->
+    <div id="fixed-label" class="fixed-label"></div>
+  </div>
+
+  <section class="legend">
+
+  <div id="info-a" class="info-block">
+    <h2>A 寵惠堂</h2>
+    <p>
+      校長室、副校長室、教務長室、註冊課務組、招生組、學務長室、總務長室、
+      出納組、研究發展長室、研究事務組、校務發展組評鑑組、學術交流長室、
+      國際事務中心、兩岸事務中心、社會資源長室、校友服務暨資源拓展中心、
+      主任秘書室、秘書室、人事室、會計室、校友總會雙溪辦公室、
+      法商聯合辦公室、校友交誼室、A111會議室、A302境外生輔導交流室
+    </p>
+  </div>
+
+  <div id="info-b" class="info-block">
+    <h2>B 綜合大樓</h2>
+    <p>
+      德育中心、群育暨美育中心、學生住宿中心、軍訓室（校安中心）、
+      電子計算機中心、資安卓越中心、海量資料分析研究中心、
+      懷恩數位校史館、事務組管理室、學生會、社團辦公室及活動空間、
+      體育館、健身房、傳賢堂、國際會議廳、舜文廳、B013研討室、
+      B501哺（集）乳室、便利商店、郵局、望星廣場、餐憶食堂、
+      列影印中心、體育室
+    </p>
+  </div>
+
+  <div id="info-c" class="info-block">
+    <h2>C 愛徒樓</h2>
+    <p>
+      採購保管組、校牧室、C103議價室、健康暨諮商中心
+    </p>
+  </div>
+
+  <div id="info-d" class="info-block">
+    <h2>D 第二教學研究大樓</h2>
+    <p>
+      人文社會學院、中國文學系、歷史學系、哲學系、政治學系、
+      社會學系、社會工作學系、音樂學系、教學資源中心、
+      教師教學發展組、學生學習資源組、教學科技推廣組、
+      通識教育中心、生涯發展中心、師資培育中心、
+      校務資料分析中心、事務組管理室、松怡廳、虛擬攝影棚、
+      學生學習進行室、教師研究室、咖啡坊、D0102曾議室
+    </p>
+  </div>
+
+  <div id="info-e" class="info-block">
+    <h2>E 汽機車停車場</h2>
+    <p>汽車與機車停放區域</p>
+  </div>
+
+  <div id="info-f" class="info-block">
+    <h2>F 文化樓</h2>
+    <p>
+      微生物學系、心理學系（教師研究室）、檢驗研究中心行政辦公室、
+      環境安全衛生暨事務管理組、營繕組
+    </p>
+  </div>
+
+  <div id="info-g" class="info-block">
+    <h2>G 戴蓀堂</h2>
+    <p>語言教學中心、註冊課務組、G101會議室</p>
+  </div>
+
+  <div id="info-h" class="info-block">
+    <h2>H 哲生樓</h2>
+    <p>
+      巨量資料管理學院、資料科學系、張佛泉人權研究中心、
+      中東歐研究中心、人權學程、教師研究室、H101哲英廳
+    </p>
+  </div>
+
+  <div id="info-i" class="info-block">
+    <h2>I 光道廳</h2>
+    <p>研討室、化學實驗室、教師研究室、稽核辦公室</p>
+  </div>
+
+  <div id="info-j" class="info-block">
+    <h2>J 研討室</h2>
+    <p>研討室、福委會辦公室、心理學系研究生研討室</p>
+  </div>
+
+  <div id="info-k" class="info-block">
+    <h2>K 心理學系實驗室</h2>
+    <p>心理學系電腦教室、心理學系實驗室</p>
+  </div>
+
+  <div id="info-l" class="info-block">
+    <h2>L 心理學系</h2>
+    <p>心理學系、教師研究室</p>
+  </div>
+
+  <div id="info-m" class="info-block">
+    <h2>M 超庸館</h2>
+    <p>化學系、微生物學系、檢驗研究中心、實驗室、教師研究室</p>
+  </div>
+
+  <div id="info-n" class="info-block">
+    <h2>N 中正圖書館</h2>
+    <p>圖書館、閱覽室</p>
+  </div>
+
+  <div id="info-p" class="info-block">
+    <h2>P 雷德樓</h2>
+    <p>教師研究室</p>
+  </div>
+
+  <div id="info-q" class="info-block">
+    <h2>Q 教師研究二樓</h2>
+    <p>教師研究室、招生專業化發展計畫辦公室、Q122研討室</p>
+  </div>
+
+  <div id="info-r" class="info-block">
+    <h2>R 第一教學研究大樓</h2>
+    <p>
+      外語學院、英文學系、日本語文學系、德國文化學系、
+      理學院、數學系、物理學系、事務組管理室、
+      普仁堂圖書館第二閱覽室、戴氏基金會會議室、
+      教師研究室、R0108會議室
+    </p>
+  </div>
+
+  <div id="info-s" class="info-block">
+    <h2>S 楓雅學苑</h2>
+    <p>華語教學中心</p>
+  </div>
+
+  <div id="info-t" class="info-block">
+    <h2>T 東荊學盧</h2>
+    <p>學人招待所</p>
+  </div>
+
+  <div id="info-u" class="info-block">
+    <h2>U 東桂學蘆</h2>
+    <p>學人招待所</p>
+  </div>
+
+  <div id="info-x" class="info-block">
+    <h2>松勁樓</h2>
+    <p>男生宿舍</p>
+  </div>
+
+  <div id="info-y" class="info-block">
+    <h2>柚芳樓</h2>
+    <p>女生宿舍</p>
+  </div>
+
+  <div id="info-z" class="info-block">
+    <h2>榕華樓</h2>
+    <p>女生宿舍</p>
+  </div>
+
+  <div id="info-2" class="info-block">
+    <h2>德舍</h2>
+  </div>
+
+  <div id="info-3" class="info-block">
+    <h2>文舍</h2>
+  </div>
+
+  <div id="info-4 " class="info-block">
+    <h2>錢穆故居</h2>
+  </div>
+
+  <div id="info-1" class="info-block">
+    <h2>操場與球場</h2>
+    <p>操場.排球場.籃球場.網球場</p>
+  </div>
+
+</section>
+
+</main>
+
+<script>
+  const label = document.getElementById("fixed-label");
+  const areas = document.querySelectorAll(".building-area");
+  const container = document.querySelector(".map-container");
+
+  areas.forEach(area => {
+    area.addEventListener("mouseenter", (e) => {
+      const rect = area.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+
+      label.textContent = area.dataset.name;
+      label.style.opacity = 1;
+
+      const top = rect.top - containerRect.top - 25; 
+      const left = rect.left - containerRect.left + rect.width / 2;
+      label.style.top = top + "px";
+      label.style.left = left + "px";
+    });
+
+    area.addEventListener("mouseleave", () => {
+      label.style.opacity = 0;
+    });
+
+    area.addEventListener("click", () => {
+      const target = area.dataset.target;
+      if (target) {
+        document.querySelector(target).scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
