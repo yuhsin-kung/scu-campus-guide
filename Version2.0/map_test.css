@@ -82,4 +82,13 @@ body {
   transition: opacity 0.15s ease-out;
   pointer-events: none;
   z-index: 10;
+
+}
+
+.map-title {
+  background-color: #accbec; 
+  color: #000000;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
